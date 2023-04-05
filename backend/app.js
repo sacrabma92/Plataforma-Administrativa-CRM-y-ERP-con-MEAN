@@ -6,6 +6,7 @@ var port = process.env.port || 4201;
 var app = express();
 
 var test_routes = require('./routes/test')
+var colaborador_routes = require('./routes/colaborador')
 
 mongoose.connect('mongodb+srv://root:root@cluster0.syw8d.mongodb.net/negocio', (err, res) => {
   if (err) {
@@ -30,5 +31,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/api', test_routes);
+app.use('/api', colaborador_routes);
 
 module.exports = app;
