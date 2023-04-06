@@ -32,8 +32,8 @@ export class ColaboradorService {
     return this._http.get(this.url + 'listar_colaboradores_admin', { headers: headers });
   }
 
-  cambiar_estado_colaborador_admin(id: any, token: any): Observable<any> {
+  cambiar_estado_colaborador_admin(id: any, data: any, token: any): Observable<any> {
     let headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization' : token});
-    return this._http.get(this.url + 'cambiar_estado_colaborador_admin/'+id, { headers: headers });
+    return this._http.put(this.url + 'cambiar_estado_colaborador_admin/' +id ,data, { headers: headers });
   }
 }

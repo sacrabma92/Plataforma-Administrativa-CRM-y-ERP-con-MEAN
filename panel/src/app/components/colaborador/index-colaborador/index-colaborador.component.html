@@ -183,7 +183,7 @@
                                 </div>
                             </div>
 
-                            <div class="modal fade" id="delete-{{item._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade"  id="delete-{{item._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
                                       <div class="modal-header">
@@ -197,11 +197,11 @@
                                       </div>
                                       <div class="modal-footer">
                                           <button type="button" class="btn btn-warning font-weight-bold" data-dismiss="modal">Cerrar</button>
-                                          <button *ngIf="!load_estado" (click)="set_state(item._id, item.estado)" type="button" class="btn btn-danger font-weight-bold">Enviar</button>
+                                          <button *ngIf="!load_estado" type="button" class="btn btn-danger font-weight-bold" (click)="set_state(item._id, item.estado)">Enviar</button>
                           
                                           <button *ngIf="load_estado" class="btn btn-danger" type="button" disabled>
                                               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                              Endiando...
+                                              Enviando...
                                           </button>
                                       </div>
                                   </div>
